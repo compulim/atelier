@@ -1,0 +1,39 @@
+{
+  "testPathIgnorePatterns": ["/__setup__/", "/lib/", "/node_modules/", "/__types__/", "\\.pnp\\.[^\\/]+$"],
+  "transform": {
+    "\\.css$": "jest-transform-stub",
+    "\\.m?[jt]sx?$": [
+      "babel-jest",
+      {
+        "presets": [
+          [
+            "@babel/preset-react",
+            {
+              "runtime": "classic"
+            }
+          ],
+          [
+            "@babel/preset-typescript",
+            {
+              "allowDeclareFields": true
+            }
+          ],
+          [
+            "@babel/preset-env",
+            {
+              "modules": "commonjs",
+              "targets": {
+                "node": "20"
+              }
+            }
+          ]
+        ],
+        "sourceMaps": true
+      }
+    ]
+  },
+  "transformIgnorePatterns": [
+    "/node_modules/(?!(@shikijs|ccount|character-entities|character-entities-html4|character-entities-legacy|comma-separated-tokens|decode-named-character-reference|hast-util-to-html|hast-util-whitespace|html-void-elements|micromark|micromark-core-commonmark|micromark-factory-destination|micromark-factory-label|micromark-factory-title|micromark-factory-space|micromark-factory-whitespace|micromark-util-chunked|micromark-util-classify-character|micromark-util-combine-extensions|micromark-util-decode-numeric-character-reference|micromark-util-encode|micromark-util-normalize-identifier|micromark-util-character|micromark-util-html-tag-name|micromark-util-resolve-all|micromark-util-sanitize-uri|micromark-util-subtokenize|property-information|space-separated-tokens|stringify-entities|zwitch|shiki)/)"
+  ],
+  "watchPathIgnorePatterns": ["\\.tmp\\."]
+}

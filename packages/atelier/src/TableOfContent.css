@@ -1,0 +1,27 @@
+.atelier__table-of-content {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: calc(var(--padding) * 1.5);
+}
+
+.atelier__table-of-content h1,
+.atelier__table-of-content h2,
+.atelier__table-of-content h3,
+.atelier__table-of-content h4,
+.atelier__table-of-content h5,
+.atelier__table-of-content h6 {
+  font-family: unset;
+  font-weight: 100;
+}
+
+.atelier__table-of-content *:first-child {
+  margin-block-start: 0;
+}
+
+.atelier__table-of-content *:last-child {
+  margin-block-end: 0;
+}
+
+.atelier__table-of-content a {
+  color: unset;
+}

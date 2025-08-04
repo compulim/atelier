@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"]
+  },
+  "extends": "@tsconfig/strictest/tsconfig.json"
+}
