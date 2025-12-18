@@ -8,7 +8,6 @@
       "ESNext",
       "WebWorker"
     ],
-    "module": "esnext",
     "moduleResolution": "Bundler",
     "noEmit": true,
     "strict": true,

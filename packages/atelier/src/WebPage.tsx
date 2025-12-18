@@ -30,11 +30,14 @@ type Props = InferInput<typeof propsSchema>;
 function WebPage(props: Props) {
   const { onCode, src } = parse(propsSchema, props);
 
-  const handleMessage = useCallback<(event: MessageEvent) => void>(event => {
-    const result = safeParse(codeMessageEventDataSchema, event.data);
+  const handleMessage = useCallback<(event: MessageEvent) => void>(
+    event => {
+      const result = safeParse(codeMessageEventDataSchema, event.data);
 
-    result.success && onCode?.(result.output);
-  }, []);
+      result.success && onCode?.(result.output);
+    },
+    [onCode]
+  );
 
   useEffect(() => {
     window.addEventListener('message', handleMessage);
