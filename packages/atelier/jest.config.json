@@ -4,7 +4,7 @@
   "transform": {
     "/__tests__/types/": ["<rootDir>/__tests__/__setup__/typingTestTransformer.js"],
     "\\.css$": "jest-transform-stub",
-    "\\.[jt]sx?$": [
+    "\\.m?[jt]sx?$": [
       "babel-jest",
       {
         "presets": [
